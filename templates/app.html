@@ -1,0 +1,16 @@
+<h1>Angular 2 - Dem App</h1>
+<p>
+	Name <strong>{{ name }}</strong>
+</p>
+<div>
+	<strong>Skills:</strong>
+	<div>
+		<input type="text" #new-skill (keyup)="doneSkillTyping($event)"/>
+		<button (click)="addToSkills(newSkill)">Add</button>
+	</div>
+	<ul>
+		<li *ng-for="#skill of skills">
+			{{ skill }}
+		</li>
+	</ul>
+</div>
