@@ -46,7 +46,9 @@ class AppComponent {
         }
 
         this.skills.push(newSkill);
+
         skill.value = null;
+        skill.focus();
     }
 
     /**
