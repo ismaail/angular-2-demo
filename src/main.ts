@@ -5,7 +5,7 @@ import {
     NgFor
 } from "angular2/angular2";
 
-import { DeveloperService } from "./developer-service";
+import { DeveloperService } from "./services/developer";
 
 @Component({
     selector: "my-app",
