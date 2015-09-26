@@ -6,7 +6,7 @@
     <div class="input-group">
         <input type="text" class="form-control" placeholder="add skill" #new-skill (keyup)="doneSkillTyping($event)">
         <span class="input-group-btn">
-            <button class="btn btn-primary" type="button" (click)="addToSkills(newSkill)">Add</button>
+            <button [disabled]="addButton.disabled" class="btn btn-primary" type="button" (click)="addToSkills(newSkill)">Add</button>
         </span>
     </div>
     <ul class="list-group">

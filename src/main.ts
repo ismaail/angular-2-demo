@@ -28,8 +28,10 @@ class AppComponent {
     constructor(developerService: DeveloperService) {
         this.name = developerService.name;
         this.skills = developerService.skills;
+        this.addButton = {
+            "disabled": "disabled"
+        };
     }
-
     /**
      * Add new skill to the skills list
      *
@@ -49,6 +51,7 @@ class AppComponent {
 
         skill.value = null;
         skill.focus();
+        this.addButton.disabled = "disabled";
     }
 
     /**
@@ -60,6 +63,8 @@ class AppComponent {
         // Watch for "Enter" key 13
         if (13 === event.which) {
             this.addToSkills(event.target);
+        } else {
+            this.addButton.disabled = (this.isValidSkill(event.target.value)) ? "" : "disabled";
         }
     }
 
