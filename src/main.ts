@@ -87,7 +87,7 @@ class AppComponent {
      *
      * @param {integer} index
      */
-    deleteSkill(index) {
+    deleteSkill(index: integer) {
         this.skills.splice(index, 1);
     }
 }
