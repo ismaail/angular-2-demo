@@ -1,0 +1,6 @@
+{
+  "name": "angular2-demo",
+    "dependencies": {
+    "bootstrap-css": "3.*"
+  }
+}
