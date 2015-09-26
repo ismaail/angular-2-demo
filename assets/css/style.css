@@ -2,10 +2,18 @@
     box-shadow: none;
     border-radius: 0;
 }
+    .form-control:focus, .form-control:active {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
 
 .btn {
     border-radius: 0;
 }
+    .btn:focus {
+        outline: none;
+    }
 
 .list-group .list-group-item:nth-child(2) {
     border-top: none;
