@@ -1,16 +1,17 @@
-<h1>Angular 2 - Demo App</h1>
-<p>
-	Name <strong>{{ name }}</strong>
-</p>
-<div>
-	<strong>Skills:</strong>
-	<div>
-		<input type="text" #new-skill (keyup)="doneSkillTyping($event)"/>
-		<button (click)="addToSkills(newSkill)">Add</button>
-	</div>
-	<ul>
-		<li *ng-for="#skill of skills">
-			{{ skill }}
-		</li>
-	</ul>
+<div class="col-sm-12">
+    <h1>Angular 2 - Demo App</h1>
+    <h4>Name <strong>{{ name }}</strong></h4>
+</div>
+<div class="col-sm-4">
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="add skill" #new-skill (keyup)="doneSkillTyping($event)">
+        <span class="input-group-btn">
+            <button class="btn btn-primary" type="button" (click)="addToSkills(newSkill)">Add</button>
+        </span>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item" *ng-for="#skill of skills">
+            {{ skill }}
+        </li>
+    </ul>
 </div>
