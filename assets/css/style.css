@@ -1,0 +1,12 @@
+.form-control {
+    box-shadow: none;
+    border-radius: 0;
+}
+.btn {
+    padding-bottom: 7px;
+    border-radius: 0;
+}
+
+.form-control, .btn {
+    border-bottom: none;
+}
