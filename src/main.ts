@@ -39,9 +39,9 @@ class AppComponent {
         /**
          * @type {string}
          */
-        let newSkill = skill.value.trim();
+        let newSkill = skill.value;
 
-        if ("" === newSkill) {
+        if (! this.isValidSkill(newSkill)) {
             return;
         }
 
@@ -61,6 +61,20 @@ class AppComponent {
         if (13 === event.which) {
             this.addToSkills(event.target);
         }
+    }
+
+    /**
+     * Check if skill is valid
+     *
+     * @param {string }skill
+     * @returns {boolean}
+     */
+    isValidSkill(skill: string) {
+        if ("" === skill.trim()) {
+            return false;
+        }
+
+        return true;
     }
 
     /**
