@@ -62,6 +62,15 @@ class AppComponent {
             this.addToSkills(event.target);
         }
     }
+
+    /**
+     * Delete Skill
+     *
+     * @param {integer} index
+     */
+    deleteSkill(index) {
+        this.skills.splice(index, 1);
+    }
 }
 
 bootstrap(AppComponent);

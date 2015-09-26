@@ -10,7 +10,8 @@
         </span>
     </div>
     <ul class="list-group">
-        <li class="list-group-item" *ng-for="#skill of skills">
+        <li class="list-group-item" *ng-for="#skill of skills; #i=index">
+            <button class="badge btn btn-danger" (click)="deleteSkill(i)" title="Delete">x</button>
             {{ skill }}
         </li>
     </ul>

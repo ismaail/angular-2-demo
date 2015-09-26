@@ -2,11 +2,19 @@
     box-shadow: none;
     border-radius: 0;
 }
+
 .btn {
-    padding-bottom: 7px;
     border-radius: 0;
 }
 
-.form-control, .btn {
-    border-bottom: none;
+.list-group .list-group-item:nth-child(2) {
+    border-top: none;
+}
+
+.list-group .list-group-item:last-child {
+    border-radius: 0;
+}
+
+.badge {
+    background-color: #d9534f;
 }
