@@ -9,7 +9,7 @@ import { DeveloperService } from "./services/developer";
 
 @Component({
     selector: "my-app",
-    appInjector: [DeveloperService]
+    bindings: [DeveloperService]
 })
 @View({
     templateUrl: "templates/app.html",
