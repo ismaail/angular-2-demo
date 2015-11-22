@@ -20,6 +20,12 @@ import { DeveloperService } from "./services/developer";
  * AppComponenet class
  */
 class AppComponent {
+    name = '';
+    skills = [];
+    addButton = {
+        "disabled": "disabled"
+    };
+
     /**
      * Initialse AppComponent Class
      *
@@ -28,16 +34,13 @@ class AppComponent {
     constructor(developerService: DeveloperService) {
         this.name = developerService.name;
         this.skills = developerService.skills;
-        this.addButton = {
-            "disabled": "disabled"
-        };
     }
     /**
      * Add new skill to the skills list
      *
-     * @param {object} skill
+     * @param {Object} skill
      */
-    addToSkills(skill: object) {
+    addToSkills(skill: Object) {
         /**
          * @type {string}
          */
@@ -57,9 +60,9 @@ class AppComponent {
     /**
      * Listen to new skill input text keyup event
      *
-     * @param {object} event
+     * @param {Object} event
      */
-    doneSkillTyping(event: object) {
+    doneSkillTyping(event: Object) {
         // Watch for "Enter" key 13
         if (13 === event.which) {
             this.addToSkills(event.target);
@@ -71,8 +74,8 @@ class AppComponent {
     /**
      * Check if skill is valid
      *
-     * @param {string }skill
-     * @returns {boolean}
+     * @param {String }skill
+     * @returns {Boolean}
      */
     isValidSkill(skill: string) {
         if ("" === skill.trim()) {
@@ -87,7 +90,7 @@ class AppComponent {
      *
      * @param {integer} index
      */
-    deleteSkill(index: integer) {
+    deleteSkill(index: Number) {
         this.skills.splice(index, 1);
     }
 }
