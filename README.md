@@ -5,18 +5,17 @@ TypeScript to JavaScript
 ---
 
 
-
-Compile TypeScript files in `src/` to JavaScript in `app/` folder.
+Compile typescript file
 
 ```
-tsc --watch -m commonjs -t es5 --emitDecoratorMetadata src/*.ts --outDir app/ 2>&1 
+npm run tsc
 ```
 
 Run the server
 ---
 
 ```
-http-server
+npm start
 ```
 
-View in the Browser at [http://localhost:8080](http://localhost:8080)
+View in the Browser at [http://127.0.0.1:8080/src/](http://127.0.0.1:8080/src/)
