@@ -2,18 +2,17 @@ import {
     Component,
     View,
     bootstrap,
-    NgFor
+    CORE_DIRECTIVES
 } from "angular2/angular2";
 
 import { DeveloperService } from "./services/developer";
+import { SkillForm } from './forms/skill-form';
 
 @Component({
     selector: "my-app",
-    bindings: [DeveloperService]
-})
-@View({
+    bindings: [DeveloperService],
     templateUrl: "templates/app.html",
-    directives: [NgFor]
+    directives: [CORE_DIRECTIVES,  SkillForm]
 })
 
 /**
@@ -23,10 +22,6 @@ class AppComponent {
     name: string;
     skills: number[];
 
-    addButton = {
-        "disabled": "disabled"
-    };
-
     /**
      * Initialse AppComponent Class
      *
@@ -35,51 +30,6 @@ class AppComponent {
     constructor(developerService: DeveloperService) {
         this.name = developerService.name;
         this.skills = developerService.skills;
-    }
-    /**
-     * Add new skill to the skills list
-     *
-     * @param {Object} skill
-     */
-    addToSkills(skill) {
-        /**
-         * @type {string}
-         */
-        let newSkill = skill.value;
-
-        if (! this.isValidSkill(newSkill)) {
-            return;
-        }
-
-        this.skills.push(newSkill);
-
-        skill.value = null;
-        skill.focus();
-        this.addButton.disabled = "disabled";
-    }
-
-    /**
-     * Listen to new skill input text keyup event
-     *
-     * @param {Object} event
-     */
-    doneSkillTyping(event) {
-        // Watch for "Enter" key 13
-        if (13 === event.which) {
-            this.addToSkills(event.target);
-        } else {
-            this.addButton.disabled = (this.isValidSkill(event.target.value)) ? "" : "disabled";
-        }
-    }
-
-    /**
-     * Check if skill is valid
-     *
-     * @param {String }skill
-     * @returns {Boolean}
-     */
-    isValidSkill(skill: string) {
-        return "" !== skill.trim();
     }
 
     /**

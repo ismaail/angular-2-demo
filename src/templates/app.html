@@ -3,12 +3,7 @@
     <h4><strong>{{ name }}</strong> has {{ skills.length }} skills</h4>
 </div>
 <div class="col-sm-4">
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="add skill" #new-skill (keyup)="doneSkillTyping($event)">
-        <span class="input-group-btn">
-            <button [disabled]="addButton.disabled" class="btn btn-primary" type="button" (click)="addToSkills(newSkill)">Add</button>
-        </span>
-    </div>
+    <skill-form></skill-form>
     <ul class="list-group">
         <li class="list-group-item" *ng-for="#skill of skills; #i=index">
             <button class="badge btn btn-danger" (click)="deleteSkill(i)" title="Delete">x</button>
