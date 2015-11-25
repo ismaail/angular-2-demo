@@ -26,3 +26,12 @@
 .badge {
     background-color: #d9534f;
 }
+
+.ng-valid[required] {
+    border: 1px solid #42A948; /* green */
+    border-left-width: 5px;
+}
+.ng-invalid.ng-touched {
+    border: 1px solid #E15653; /* red */
+    border-left-width: 5px;
+}
