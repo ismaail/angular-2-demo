@@ -1,26 +1,20 @@
-import {
-    Component,
-    View,
-    bootstrap,
-    CORE_DIRECTIVES
-} from "angular2/angular2";
-
-import { DeveloperService } from "./services/developer";
-import { SkillForm } from './forms/skill-form';
+import { Component }            from "angular2/core";
+import { DeveloperService }     from "./services/developer";
+import { SkillForm }            from "./forms/skill-form";
 
 @Component({
     selector: "my-app",
-    bindings: [DeveloperService],
+    bindings: [ DeveloperService ],
     templateUrl: "templates/app.html",
-    directives: [CORE_DIRECTIVES,  SkillForm]
+    directives: [ SkillForm ]
 })
 
 /**
  * AppComponenet class
  */
 class AppComponent {
-    name: string;
-    skills: number[];
+    name: String;
+    skills: Number[];
 
     /**
      * Initialse AppComponent Class
@@ -42,4 +36,4 @@ class AppComponent {
     }
 }
 
-bootstrap(AppComponent);
+export { AppComponent }

@@ -1,26 +1,20 @@
-import {
-    Component,
-    View,
-    CORE_DIRECTIVES,
-    FORM_DIRECTIVES
-} from 'angular2/angular2';
-
-import { Skill } from '../models/skill';
-import { DeveloperService } from "../services/developer";
+import { Component }          from "angular2/core";
+import { NgForm }             from "angular2/common";
+import { Skill }              from "../models/skill";
+import { DeveloperService }   from "../services/developer";
 
 @Component({
     selector: 'skill-form',
-    templateUrl: 'templates/forms/skill.html',
-    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES]
+    templateUrl: 'templates/forms/skill.html'
 })
 
 /**
  * Skill Form Class
  */
 class SkillForm {
-    submitted: boolean;
+    submitted: Boolean;
     model: Skill;
-    skills: number[];
+    skills: Number[];
 
     /**
      * Initialse SkillForm Class

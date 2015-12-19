@@ -1,11 +1,11 @@
 <div class="col-sm-12">
-    <h1>Angular 2 - Demo App</h1>
+    <h1>Angular 2 Beta - Demo App</h1>
     <h4><strong>{{ name }}</strong> has {{ skills.length }} skills</h4>
 </div>
 <div class="col-sm-4">
     <skill-form></skill-form>
     <ul class="list-group">
-        <li class="list-group-item" *ng-for="#skill of skills; #i=index">
+        <li class="list-group-item" *ngFor="#skill of skills; #i=index">
             <button class="badge btn btn-danger" (click)="deleteSkill(i)" title="Delete">x</button>
             {{ skill }}
         </li>
