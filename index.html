@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <title>Angular 2 Beta - Demo App</title>
+    <link rel="stylesheet" href="/assets/lib/bootstrap-css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="/node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="/node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="/node_modules/angular2/bundles/router.dev.js"></script>
+    <script>
+        System.config({
+            packages: {
+                'app': {
+                    format: 'register',
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        System.import('app/boot')
+            .then(null, console.error.bind(console));
+    </script>
+</head>
+<body>
+    <div class="container">
+        <my-app>loading...</my-app>
+    </div>
+</body>
+</html>
