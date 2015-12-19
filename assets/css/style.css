@@ -15,7 +15,10 @@
         outline: none;
     }
 
-.list-group .list-group-item:nth-child(2) {
+.list-group-item:first-child {
+    border-radius: 0;
+}
+.list-group .list-group-item:nth-child(1) {
     border-top: none;
 }
 
@@ -25,6 +28,10 @@
 
 .badge {
     background-color: #d9534f;
+}
+
+.form-skill-name {
+    border-left-width: 5px;
 }
 
 .ng-valid[required] {
