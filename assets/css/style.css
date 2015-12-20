@@ -32,6 +32,7 @@
 
 .form-skill-name {
     border-left-width: 5px;
+    border-right: none !important;
 }
 
 .ng-valid[required] {
