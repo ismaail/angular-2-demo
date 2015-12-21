@@ -1,6 +1,5 @@
 import { Component }          from "angular2/core";
 import { NgForm }             from "angular2/common";
-import { Skill }              from "../models/skill";
 import { DeveloperService }   from "../services/developer";
 
 @Component({
@@ -14,7 +13,7 @@ import { DeveloperService }   from "../services/developer";
 class SkillForm {
     submitted: Boolean;
     model: Skill;
-    skills: Number[];
+    skills: string[];
 
     /**
      * Initialse SkillForm Class

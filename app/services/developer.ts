@@ -3,7 +3,7 @@
  */
 class DeveloperService {
     name: string;
-    skills: Array<string>;
+    skills: string[];
 
     /**
      * Initialse DeveloperService Class

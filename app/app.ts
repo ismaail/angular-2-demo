@@ -13,8 +13,8 @@ import { SkillForm }            from "./forms/skill-form";
  * AppComponenet class
  */
 class AppComponent {
-    name: String;
-    skills: Number[];
+    name: string;
+    skills: string[];
 
     /**
      * Initialse AppComponent Class
@@ -31,7 +31,7 @@ class AppComponent {
      *
      * @param {Number} index
      */
-    deleteSkill(index: Number) {
+    deleteSkill(index: number) {
         this.skills.splice(index, 1);
     }
 }
