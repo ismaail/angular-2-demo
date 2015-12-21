@@ -23,7 +23,7 @@ class SkillForm {
      */
     constructor(developerService: DeveloperService) {
         this.submitted = false;
-        this.model = new Skill();
+        this.model = { name: "" };
         this.skills = developerService.skills;
     }
 

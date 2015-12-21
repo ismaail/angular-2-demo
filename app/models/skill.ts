@@ -1,8 +1,6 @@
 /**
  * Skill Model
  */
-class Skill {
+interface Skill {
     name: string;
 }
-
-export { Skill }
