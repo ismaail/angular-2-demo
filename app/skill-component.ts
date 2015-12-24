@@ -3,16 +3,15 @@ import { DeveloperService }     from "./services/developer";
 import { SkillForm }            from "./forms/skill-form";
 
 @Component({
-    selector: "#my-app",
     bindings: [ DeveloperService ],
-    templateUrl: "templates/app.html",
+    templateUrl: "templates/skill.html",
     directives: [ SkillForm ]
 })
 
 /**
- * AppComponenet class
+ * Skill Component
  */
-class AppComponent {
+export class SkillComponent {
     name: string;
     skills: string[];
 
@@ -35,5 +34,3 @@ class AppComponent {
         this.skills.splice(index, 1);
     }
 }
-
-export { AppComponent }
