@@ -21,8 +21,20 @@ export class SkillComponent {
      * @param {DeveloperService} developerService
      */
     constructor(developerService: DeveloperService) {
-        this.name = developerService.name;
-        this.skills = developerService.skills;
+        this.name = '';
+        this.skills = [];
+
+        developerService.load()
+            .subscribe(response => {
+                if (200 !== response.status) {
+                    console.error("Error fetching data from remote API.");
+                    return;
+                }
+
+                let data = response.json().data;
+                this.name = data.name;
+                this.skills = data.skills;
+            });
     }
 
     /**
