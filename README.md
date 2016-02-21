@@ -1,8 +1,16 @@
 Angular 2 - Demo App
 ====================
 
-TypeScript to JavaScript
+Assest & Resources
 ---
+
+```
+npm install
+```
+
+```
+bower install
+```
 
 
 Compile typescript file and run the server
