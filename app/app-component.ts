@@ -1,6 +1,6 @@
-import { Component }                        from "angular2/core";
-import { RouteConfig, ROUTER_DIRECTIVES }   from "angular2/router";
-import { SkillComponent }                   from "./skill-component";
+import { Component } from "angular2/core";
+import { RouteConfig, ROUTER_DIRECTIVES } from "angular2/router";
+import { SkillComponent } from "./skill-component";
 
 @Component({
     selector: "#my-app",

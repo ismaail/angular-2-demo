@@ -1,6 +1,6 @@
-import { Component }          from "angular2/core";
-import { NgForm }             from "angular2/common";
-import { DeveloperService }   from "../services/developer";
+import { Component } from "angular2/core";
+import { NgForm } from "angular2/common";
+import { DeveloperService } from "../services/developer";
 
 @Component({
     selector: 'skill-form',

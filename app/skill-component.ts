@@ -1,6 +1,6 @@
-import { Component }            from "angular2/core";
-import { DeveloperService }     from "./services/developer";
-import { SkillForm }            from "./forms/skill-form";
+import { Component } from "angular2/core";
+import { DeveloperService } from "./services/developer";
+import { SkillForm } from "./forms/skill-form";
 
 @Component({
     bindings: [ DeveloperService ],
