@@ -3,7 +3,7 @@ import { DeveloperService } from "./services/developer";
 import { SkillForm } from "./forms/skill-form";
 
 @Component({
-    bindings: [ DeveloperService ],
+    providers: [ DeveloperService ],
     templateUrl: "templates/skill.html",
     directives: [ SkillForm ]
 })
