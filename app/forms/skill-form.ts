@@ -1,6 +1,4 @@
-import { Component } from "angular2/core";
-import { NgForm } from "angular2/common";
-import { DeveloperService } from "../services/developer";
+import { Component, Input } from "angular2/core";
 
 @Component({
     selector: 'skill-form',
@@ -10,27 +8,23 @@ import { DeveloperService } from "../services/developer";
 /**
  * Skill Form Class
  */
-class SkillForm {
+export class SkillForm {
     submitted: Boolean;
     model: Skill;
-    skills: string[];
+    @Input() skills: string[];
 
     /**
      * Initialse SkillForm Class
-     *
-     * @param developerService
      */
-    constructor(developerService: DeveloperService) {
+    constructor() {
         this.submitted = false;
         this.model = { name: "" };
-        this.skills = developerService.skills;
     }
 
     /**
      * OnSubmit add new skill
      */
     onSubmit() {
-
         this.submitted = true;
 
         if (! this.model.name.trim()) {
@@ -41,5 +35,3 @@ class SkillForm {
         this.model.name = null;
     }
 }
-
-export { SkillForm }
