@@ -15,6 +15,6 @@ export class DeveloperService {
     }
 
     load() {
-        return this.http.get('http://tmp.dev/testes/skills.json');
+        return this.http.get('http://localhost:3000/data/skills.json');
     }
 }
