@@ -1,4 +1,4 @@
-import { Component } from 'angular2/core';
+import { Component, OnInit } from 'angular2/core';
 import { DeveloperService } from './services/developer';
 import { SkillForm } from './forms/skill-form';
 
@@ -11,20 +11,25 @@ import { SkillForm } from './forms/skill-form';
 /**
  * Skill Component
  */
-export class SkillComponent {
+export class SkillComponent implements OnInit{
     name: string;
     skills: string[];
 
     /**
-     * Initialse AppComponent Class
+     * Construct AppComponent Class
      *
      * @param {DeveloperService} developerService
      */
-    constructor(developerService: DeveloperService) {
+    constructor(private developerService: DeveloperService) {
         this.name = '';
         this.skills = [];
+    }
 
-        developerService.load()
+    /**
+     * Initialize AppComponent Class
+     */
+    ngOnInit(): void {
+        this.developerService.load()
             .subscribe(response => {
                 if (200 !== response.status) {
                     console.error('Error fetching data from remote API.');
