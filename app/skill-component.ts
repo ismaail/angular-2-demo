@@ -31,15 +31,11 @@ export class SkillComponent implements OnInit{
     ngOnInit(): void {
         this.developerService.load()
             .subscribe(response => {
-                if (200 !== response.status) {
-                    console.error('Error fetching data from remote API.');
-                    return;
-                }
-
                 let data = response.json().data;
                 this.name = data.name;
                 this.skills = data.skills;
-            });
+            },
+            error => console.error(`${error.status} Error fetching data from url: "${error.url}"`));
     }
 
     /**
