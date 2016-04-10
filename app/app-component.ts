@@ -1,9 +1,9 @@
-import { Component } from "angular2/core";
-import { RouteConfig, ROUTER_DIRECTIVES } from "angular2/router";
-import { SkillComponent } from "./skill-component";
+import { Component } from 'angular2/core';
+import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
+import { SkillComponent } from './skill-component';
 
 @Component({
-    selector: "#my-app",
+    selector: '#my-app',
     template: `
         <h1>Angular 2 Beta - Demo App</h1>
         <router-outlet></router-outlet>

@@ -1,10 +1,10 @@
-import { Component } from "angular2/core";
-import { DeveloperService } from "./services/developer";
-import { SkillForm } from "./forms/skill-form";
+import { Component } from 'angular2/core';
+import { DeveloperService } from './services/developer';
+import { SkillForm } from './forms/skill-form';
 
 @Component({
     providers: [ DeveloperService ],
-    templateUrl: "templates/skill.html",
+    templateUrl: 'templates/skill.html',
     directives: [ SkillForm ]
 })
 
@@ -27,7 +27,7 @@ export class SkillComponent {
         developerService.load()
             .subscribe(response => {
                 if (200 !== response.status) {
-                    console.error("Error fetching data from remote API.");
+                    console.error('Error fetching data from remote API.');
                     return;
                 }
 
@@ -42,7 +42,7 @@ export class SkillComponent {
      *
      * @param {Number} index
      */
-    deleteSkill(index: number) {
+    deleteSkill(index: number): void {
         this.skills.splice(index, 1);
     }
 }

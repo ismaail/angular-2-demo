@@ -1,4 +1,4 @@
-import { Component, Input } from "angular2/core";
+import { Component, Input } from 'angular2/core';
 
 @Component({
     selector: 'skill-form',
@@ -18,13 +18,13 @@ export class SkillForm {
      */
     constructor() {
         this.submitted = false;
-        this.model = { name: "" };
+        this.model = { name: '' };
     }
 
     /**
      * OnSubmit add new skill
      */
-    onSubmit() {
+    onSubmit(): void {
         this.submitted = true;
 
         if (! this.model.name.trim()) {
