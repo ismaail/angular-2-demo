@@ -2,7 +2,7 @@
     <h4><strong>{{ name }}</strong> has {{ skills.length }} skills</h4>
 </div>
 <div class="col-sm-12 col-md-8">
-    <skill-form [skills]='skills'></skill-form>
+    <skill-form (addSkill)='createSkill($event)'></skill-form>
     <ul class="list-group">
         <li class="list-group-item" *ngFor="#skill of skills; #i=index">
             <button class="badge btn btn-danger" (click)="deleteSkill(i)" title="Delete">x</button>

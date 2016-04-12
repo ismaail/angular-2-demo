@@ -46,4 +46,13 @@ export class SkillComponent implements OnInit{
     deleteSkill(index: number): void {
         this.skills.splice(index, 1);
     }
+
+    /**
+     * Add New Skill.
+     *
+     * @param {String} name
+     */
+    createSkill(name: string): void {
+        this.skills.push(name);
+    }
 }

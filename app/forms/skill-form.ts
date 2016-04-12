@@ -1,4 +1,4 @@
-import { Component, Input } from 'angular2/core';
+import { Component, Output, EventEmitter } from 'angular2/core';
 
 @Component({
     selector: 'skill-form',
@@ -11,7 +11,7 @@ import { Component, Input } from 'angular2/core';
 export class SkillForm {
     submitted: Boolean;
     model: Skill;
-    @Input() skills: string[];
+    @Output() addSkill: EventEmitter<string> = new EventEmitter<string>();
 
     /**
      * Initialse SkillForm Class
@@ -31,7 +31,7 @@ export class SkillForm {
             return;
         }
 
-        this.skills.push(this.model.name);
+        this.addSkill.emit(this.model.name);
         this.model.name = null;
     }
 }
