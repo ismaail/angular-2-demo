@@ -4,7 +4,7 @@
 <div class="col-sm-12 col-md-8">
     <skill-form (addSkill)='createSkill($event)'></skill-form>
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="#skill of skills; #i=index">
+        <li class="list-group-item" *ngFor="let skill of skills; let i = index">
             <button class="badge btn btn-danger" (click)="deleteSkill(i)" title="Delete">x</button>
             {{ skill }}
         </li>
