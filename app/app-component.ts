@@ -1,6 +1,5 @@
-import { Component } from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
-import { SkillComponent } from './skill-component';
+import { Component } from '@angular/core';
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 @Component({
     selector: '#my-app',
@@ -10,9 +9,6 @@ import { SkillComponent } from './skill-component';
     `,
     directives: [ROUTER_DIRECTIVES]
 })
-@RouteConfig([
-    { path: '/', name: 'Skill', component: SkillComponent }
-])
 
 /**
  * AppComponenet class

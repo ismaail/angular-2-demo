@@ -1,5 +1,5 @@
-import { Inject } from 'angular2/core';
-import { Http } from 'angular2/http';
+import { Inject } from '@angular/core';
+import { Http } from '@angular/http';
 
 /**
  * Developer Service Class
