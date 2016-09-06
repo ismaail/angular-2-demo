@@ -6,7 +6,7 @@
     <ul class="list-group">
         <li class="list-group-item" *ngFor="let skill of skills; let i = index">
             <button class="badge btn btn-danger" (click)="deleteSkill(i)" title="Delete">x</button>
-            {{ skill }}
+            {{ skill.name }}
         </li>
     </ul>
 </div>
