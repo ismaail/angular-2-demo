@@ -1,10 +1,10 @@
 {
-    "data": {
-        "name": "ismaail",
-        "skills": [
-            "PHP Frameworks",
-            "NodeJS",
-            "Linux Admin"
-        ]
-    }
+  "data": {
+    "name": "ismaail",
+    "skills": [
+      { "name": "PHP Frameworks", "level": 8 },
+      { "name": "NodeJS", "level": 6 },
+      { "name": "Linux Admin", "level": 8 }
+    ]
+  }
 }
