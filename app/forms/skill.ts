@@ -1,13 +1,10 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { Skill } from '../models/skill';
 
 @Component({
     selector: 'skill-form',
     templateUrl: 'templates/forms/skill.html'
 })
-
-/**
- * Skill Form Class
- */
 export class SkillForm {
     submitted: Boolean;
     model: Skill;
@@ -18,7 +15,7 @@ export class SkillForm {
      */
     constructor() {
         this.submitted = false;
-        this.model = { name: '' };
+        this.model = { name: '', level: 0 };
     }
 
     /**

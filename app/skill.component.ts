@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { Skill } from './models/skill';
 import { DeveloperService } from './services/developer';
-import { SkillForm } from './forms/skill-form';
+// import { SkillForm } from './forms/skill';
 
 @Component({
     providers: [ DeveloperService ],
-    templateUrl: 'templates/skill.html',
-    directives: [ SkillForm ]
+    templateUrl: 'templates/skill.html'
+    // directives: [ SkillForm ]
 })
 
 /**
@@ -13,7 +14,7 @@ import { SkillForm } from './forms/skill-form';
  */
 export class SkillComponent implements OnInit {
     name: string;
-    skills: string[];
+    skills: Array<Skill>;
 
     /**
      * Construct AppComponent Class
@@ -29,13 +30,8 @@ export class SkillComponent implements OnInit {
      * Initialize AppComponent Class
      */
     ngOnInit(): void {
-        this.developerService.load()
-            .subscribe(response => {
-                let data = response.json().data;
-                this.name = data.name;
-                this.skills = data.skills;
-            },
-            error => console.error(`${error.status} Error fetching data from url: "${error.url}"`));
+        this.developerService.getSkills()
+            .then(skills => this.skills = skills);
     }
 
     /**
@@ -53,6 +49,9 @@ export class SkillComponent implements OnInit {
      * @param {String} name
      */
     createSkill(name: string): void {
-        this.skills.push(name);
+        this.skills.push({
+            "name": name,
+            "level": 0
+        });
     }
 }

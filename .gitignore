@@ -1,3 +1,4 @@
 typescript.sh
 /app/**/*.js*
 /assets/lib
+/typings
