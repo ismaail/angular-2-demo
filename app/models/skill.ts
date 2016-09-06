@@ -1,6 +1,7 @@
 /**
  * Skill Model
  */
-interface Skill {
+export interface Skill {
     name: string;
+    level: number;
 }
