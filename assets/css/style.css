@@ -15,16 +15,17 @@
         outline: none;
     }
 
-.list-group-item:first-child {
-    border-radius: 0;
-}
-.list-group .list-group-item:nth-child(1) {
-    border-top: none;
+.skills-list {
+    margin-top: 12px;
 }
 
-.list-group .list-group-item:last-child {
-    border-radius: 0;
-}
+    .skills-list .list-group-item:first-child {
+        border-radius: 0;
+    }
+
+    .skills-list .list-group-item:last-child {
+        border-radius: 0;
+    }
 
 .badge {
     background-color: #d9534f;
