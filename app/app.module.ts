@@ -1,16 +1,27 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule} from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { SkillComponent } from './skill.component';
 import { SkillForm } from './forms/skill';
-import { routing } from './app.routing';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app.routing';
+import { SkillComponent } from './skill.component';
+import { DeveloperService } from "./services/developer";
 
 @NgModule({
-    imports: [ BrowserModule, HttpModule, FormsModule, routing ],
-    declarations: [ AppComponent, SkillComponent, SkillForm ],
+    imports: [
+      BrowserModule,
+      HttpModule,
+      FormsModule,
+      AppRoutingModule
+    ],
+    declarations: [
+      AppComponent,
+      SkillComponent,
+      SkillForm
+    ],
+    providers: [ DeveloperService ],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }
