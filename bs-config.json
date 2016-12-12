@@ -1,4 +1,5 @@
 {
   "open": true,
-  "browser": "chromium-browser"
+  "browser": "chromium-browser",
+  "port": 3000
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Skill } from './models/skill';
 import { DeveloperService } from './services/developer';
+import { Developer } from "./models/developer";
 
 @Component({
     templateUrl: 'templates/skill.html'
@@ -11,25 +11,24 @@ import { DeveloperService } from './services/developer';
  * Skill Component
  */
 export class SkillComponent implements OnInit {
-    name: string;
-    skills: Array<Skill>;
+    developer: Developer;
 
     /**
      * Construct AppComponent Class
      *
      * @param {DeveloperService} developerService
      */
-    constructor(private developerService: DeveloperService) {
-        this.name = '';
-        this.skills = [];
-    }
+    constructor(private developerService: DeveloperService) {}
 
     /**
      * Initialize AppComponent Class
      */
     ngOnInit(): void {
-        this.developerService.getSkills()
-            .then(skills => this.skills = skills);
+        this.developerService.find()
+            .subscribe(
+              developer => this.developer = developer,
+              err => console.log('Failed to load Developer data')
+            );
     }
 
     /**
@@ -38,7 +37,7 @@ export class SkillComponent implements OnInit {
      * @param {Number} index
      */
     deleteSkill(index: number): void {
-        this.skills.splice(index, 1);
+        this.developer.skills.splice(index, 1);
     }
 
     /**
@@ -47,7 +46,7 @@ export class SkillComponent implements OnInit {
      * @param {String} name
      */
     createSkill(name: string): void {
-        this.skills.push({
+        this.developer.skills.push({
             "name": name,
             "level": 0
         });

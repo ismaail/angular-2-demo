@@ -1,12 +1,14 @@
-<div class="col-sm-12">
-    <h4><strong>{{ name }}</strong> has {{ skills.length }} skills</h4>
-</div>
-<div class="col-sm-12 col-md-8">
-    <skill-form (addSkill)='createSkill($event)'></skill-form>
-    <ul class="list-group">
-        <li class="list-group-item" *ngFor="let skill of skills; let i = index">
-            <button class="badge btn btn-danger" (click)="deleteSkill(i)" title="Delete">x</button>
-            {{ skill.name }}
-        </li>
-    </ul>
+<div *ngIf="developer">
+  <div class="col-sm-12">
+      <h4><strong>{{ developer.name }}</strong> has {{ developer.skills.length }} skills</h4>
+  </div>
+  <div class="col-sm-12 col-md-8">
+      <skill-form (addSkill)='createSkill($event)'></skill-form>
+      <ul class="list-group skills-list">
+          <li class="list-group-item" *ngFor="let skill of developer.skills; let i = index">
+              <button class="badge btn btn-danger" (click)="deleteSkill(i)" title="Delete">x</button>
+              {{ skill.name }}
+          </li>
+      </ul>
+  </div>
 </div>
