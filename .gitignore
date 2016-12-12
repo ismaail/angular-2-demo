@@ -1,4 +1,2 @@
-typescript.sh
 /app/**/*.js*
-/assets/lib
-/typings
+/assets/vendor

@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Skill } from './models/skill';
 import { DeveloperService } from './services/developer';
-// import { SkillForm } from './forms/skill';
 
 @Component({
-    providers: [ DeveloperService ],
     templateUrl: 'templates/skill.html'
-    // directives: [ SkillForm ]
 })
 
 /**

@@ -1,13 +1,14 @@
-import { ModuleWithProviders } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { SkillComponent } from './skill.component';
 
-const appRoutes: Routes = [
-    {
-        path: '',
-        component: SkillComponent
-    }
+const routes: Routes = [
+    { path: '', component: SkillComponent }
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);
+@NgModule({
+  imports: [ RouterModule.forRoot(routes)],
+  exports: [ RouterModule ]
+})
+export class AppRoutingModule {}
