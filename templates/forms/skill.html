@@ -2,7 +2,7 @@
     <div class="input-group">
         <input type="text" class="form-control form-skill-name" placeholder="Add skill" required [(ngModel)]="model.name" name="name">
         <span class="input-group-btn">
-            <button class="btn btn-primary" type="submit" [disabled]="!skillForm.form.valid">Add</button>
+            <button class="btn btn-primary" type="submit" [disabled]="!skillForm.form.valid" [class.disabled]="!skillForm.form.valid">Add</button>
         </span>
     </div>
 </form>
