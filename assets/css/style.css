@@ -29,6 +29,15 @@
 
 .badge {
     background-color: #d9534f;
+    opacity: 0;
+}
+
+.skills-list > li:hover .badge {
+    opacity: 1;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    transition: opacity 150ms linear;
 }
 
 .form-skill-name {
@@ -37,10 +46,10 @@
 }
 
 .ng-valid[required] {
-    border: 1px solid #42A948; /* green */
+    border-color: #42A948; /* green */
     border-left-width: 5px;
 }
 .ng-invalid.ng-touched {
-    border: 1px solid #E15653; /* red */
+    border-color: #E15653; /* red */
     border-left-width: 5px;
 }
