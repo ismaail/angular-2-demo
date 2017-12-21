@@ -1,6 +1,11 @@
 {
-  "open": true,
-  "browser": "chromium-browser",
+  "server": {
+    "baseDir": "src",
+    "routes": {
+      "/node_modules": "node_modules"
+    }
+  },
+  "open": false,
   "port": 3000,
   "injectChanges": true
 }
