@@ -1,7 +1,7 @@
 import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
 
 import { Developer } from '../models/developer';
 
@@ -25,6 +25,6 @@ export class DeveloperService {
         const url = 'http://localhost:3000/data/skills.json';
 
         return this.http.get(url)
-          .map((res: Response) => <Developer>res.json().data);
+          .pipe(map((res: Response) => <Developer>res.json().data));
     }
 }
