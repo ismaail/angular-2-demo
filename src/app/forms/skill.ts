@@ -4,7 +4,7 @@ import { Skill } from '../models/skill';
 
 @Component({
     selector: 'skill-form',
-    templateUrl: 'templates/forms/skill.html'
+    templateUrl: './skill.html'
 })
 export class SkillForm {
     submitted: Boolean;

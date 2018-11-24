@@ -4,7 +4,7 @@ import { DeveloperService } from './services/developer';
 import { Developer } from "./models/developer";
 
 @Component({
-    templateUrl: 'templates/skill.html'
+    templateUrl: './skill.html'
 })
 
 /**
