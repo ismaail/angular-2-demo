@@ -1,7 +1,7 @@
-import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 
 import { Developer } from '../models/developer';
 
@@ -13,9 +13,7 @@ export class DeveloperService {
     /**
      * Initialse DeveloperService Class
      */
-    constructor(private http: Http) {
-        this.http = http;
-    }
+    constructor(private http: HttpClient) {}
 
     /**
      * Get Developer Skills List.
@@ -25,6 +23,10 @@ export class DeveloperService {
         const url = 'http://localhost:3000/data/skills.json';
 
         return this.http.get(url)
-          .pipe(map((res: Response) => <Developer>res.json().data));
+            .pipe(
+                map((response: HttpResponse<Developer>) => {
+                    return response['data'];
+                })
+            );
     }
 }
